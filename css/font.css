@@ -5,10 +5,10 @@
 
 @font-face {
   font-family: "Georgia";
-  src: url();
+  src: url(../fonts/Georgia/georgia.ttf);
 }
 
 @font-face {
   font-family: "Lato";
-  src: url(../fonts/Lato/lato-regular.ttf) format(ttf);
+  src: url(../fonts/Lato/lato-regular.ttf);
 }
