@@ -206,7 +206,17 @@
    height: 515px;
    border-radius: 20px;
    overflow: hidden;
+ }
 
+ .play-btn {
+   display: block;
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
 
  .story__player {
