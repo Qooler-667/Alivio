@@ -41,11 +41,12 @@
       </ul>
     </nav>
     <div class="header__buttons-wrapper">
-      <button type="button" class="white-btn">Sign in</button>
+      <button type="button" class="header-btn">Sign in</button>
       <button type="button" class="header-btn">Start Trial</button>
     </div>
   </header>
   <main class="main">
+    <!-- well-section -->
     <section class="well-section">
       <div class="well-section__shadow">
         <div class="well-container container">
@@ -57,7 +58,7 @@
                 Let Alivio guide you, in a personalized journal</br> experience, to overcome your stress.
               </span>
             </p>
-            <button class="green-btn well__btn" type="button">Find Your Way</button>
+            <button class="btn" type="button">Find Your Way</button>
           </div>
         </div>
       </div>
@@ -127,24 +128,62 @@
         </div>
     </section>
 
-
-
-
-
-
-
     <!-- story-section -->
     <section class="story-section">
       <div class="story-container container">
-        <div class="story__content-wrapper">
-          <h2>Let's hear about Kayla's success story</h2>
+        <div class="story__content">
+          <h2>Let's hear about<br> Kayla's success story</h2>
           <p>See how well Alivio works in a real customer’s life. </p>
-          <button class="green-btn" type="button">Let’s get started</button>
+          <button class="btn" type="button">Let’s get started</button>
+        </div>
+        <div class="story__player-wrapper">
+          <video class="story__player" controls muted src="./video/filatov-karas-otpusti-menya_279381.mp4"></video>
         </div>
       </div>
     </section>
 
+    <!-- diary-section -->
+    <section class="diary-section">
+      <div class="diary-container container">
+        <div class="diary__img-wrapper">
+          <img src="./images/diary-img.jpg" alt="">
+          <div class="diary__img-block">
+            <h6>Customized For</h6>
+            <hr class="diary__block_hr">
+            <div class="diary__block_img">
+            </div>
+            <p class="diary__block_name">Mikayla</p>
+            <h6>Your custom contents</h6>
+            <ul class="diary__block_list">
+              <li>Understand Your Stress</li>
+              <li>Anger Management</li>
+            </ul>
+          </div>
+        </div>
+        <div class="diary__content-wrapper">
+          <p class="diary__section_text">Our product</p>
+          <div class="diary__content">
+            <h2>You tell us your stress,<br>
+              We make your diary</h2>
+            <p>Everyone experiences it, and in different ways.<br>
+              Let Alivio guide you, in a personalized journal experience, to<br> overcome your stress.</p>
+            <button class="btn">Find Your Way</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer-container container">
+      <ul class="footer__list">
+        <li class="footer__list_item"><a class="footer__item_link" href="#">Alivio</a></li>
+        <li class="footer__list_item"><a class="footer__item_link" href="#">Why Alivio</a></li>
+        <li class="footer__list_item"><a class="footer__item_link" href="#">Solutions</a></li>
+        <li class="footer__list_item"><a class="footer__item_link" href="#">Community</a></li>
+        <li class="footer__list_item"><a class="footer__item_link" href="#">Pricing</a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 
