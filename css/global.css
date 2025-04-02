@@ -94,10 +94,11 @@
    line-height: 1.25;
    border-radius: 4px;
    text-align: center;
-   font-family: var(--base-font);
    color: var(--base-white);
+   font-family: var(--base-font);
    background: var(--basic-green);
    border: 1px solid var(--basic-green);
+   transition: .2s;
  }
 
  .header-btn {
@@ -122,4 +123,9 @@
 
  .story__content>.btn {
    width: 240px;
+ }
+
+ .btn:hover,
+ .header-btn:hover:not(.header-btn:first-child) {
+   background: var(--bg-color);
  }
