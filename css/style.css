@@ -181,7 +181,6 @@
  /* --- STORY-SECTION --- */
  .story-section {
    width: 100%;
-   height: 922px;
    padding-top: 230px;
    padding-bottom: 175px;
    background: var(--bg-color);
@@ -193,7 +192,11 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 20px;
+   gap: 30px;
+ }
+
+ .story__content {
+   min-width: 500px;
  }
 
  .story__content>h2,
@@ -207,7 +210,7 @@
  }
 
  .story__player-wrapper {
-   width: 895px;
+   min-width: 895px;
    height: 515px;
    border-radius: 20px;
    position: relative;
@@ -232,6 +235,11 @@
    object-fit: cover;
  }
 
+
+ .play-btn {
+   cursor: pointer;
+ }
+
  /* --- DIARY-SECTION --- */
  .diary-section {
    padding-top: 120px;
@@ -244,7 +252,7 @@
  }
 
  .diary__img-wrapper {
-   width: 640px;
+   min-width: 600px;
    height: 575px;
    margin-left: 70px;
    position: relative;
@@ -277,7 +285,6 @@
  h6 {
    margin-bottom: 10px;
  }
-
 
  .diary__block_img {
    display: inline-block;
@@ -367,206 +374,3 @@
 
 
  /* --- MEDIA --- */
-
- /* --- 1440PX --- */
- @media (max-width:1440px) {
-   .well-section {
-     height: 750px;
-   }
-
-   /* step-section */
-   .step-section {
-     text-align: center;
-     padding-bottom: 50px;
-   }
-
-   .step__title-wrapper {
-     width: 80%;
-     margin-inline: auto;
-     flex-direction: column;
-     gap: 0;
-     border-bottom: 1px solid rgba(0, 0, 0, 0.074);
-     padding-bottom: 20px;
-     margin-bottom: 50px;
-   }
-
-   .step__items-wrapper {
-     flex-direction: column;
-     height: auto;
-     gap: 30px;
-   }
-
-   .step__item-wrapper,
-   .step__item-wrapper:nth-child(2),
-   .step__item-wrapper:nth-child(3) {
-     width: 100%;
-     flex-direction: row;
-     justify-content: space-evenly;
-   }
-
-   .step__item-wrapper:nth-child(2) {
-     flex-direction: row-reverse;
-   }
-
-   .step__item_content {
-     text-align: center;
-     max-width: 40%;
-   }
-
-   .step__item_title {
-     justify-content: center;
-     width: 280px;
-     margin-inline: auto;
-   }
-
-   .step__title-personalize,
-   .step__title-write,
-   .step__title-alivio {
-     left: 50%;
-     transform: translate(-50%);
-     bottom: 40px;
-     white-space: nowrap;
-   }
-
-   .step__title-alivio {
-     bottom: 50px;
-   }
-
-   .step__item_text {
-     padding: 0;
-     margin-bottom: 0;
-   }
-
-   .step__img-wrapper {
-     width: 430px;
-   }
-
-   .step__img_bg {
-     background-size: contain;
-     background-position: center;
-   }
-
- }
-
-
- /* --- 1024PX --- */
- @media (max-width:1024px) {
-   .header-container {
-     display: flex;
-     gap: 20px 30px;
-     flex-wrap: wrap;
-     text-align: center;
-     padding: 10px 20px;
-     justify-content: space-between;
-   }
-
-   .header__nav_list {
-     order: 1;
-   }
-
-   /* step-section */
-   .step-section__text {
-     margin-bottom: 20px;
-   }
-
-   .step__title {
-     line-height: 1;
-     margin-bottom: 20px;
-   }
-
- }
-
- /* --- 768PX --- */
- @media (max-width:768px) {
-   .well-section {
-     height: 550px;
-   }
-
-   .well-section__shadow {
-     width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, .2);
-     display: flex;
-     align-items: center;
-     text-align: center;
-   }
-
-   .well__content_title {
-     color: var(--base-white);
-     text-shadow: 0 0 5px black;
-   }
-
-   .well__content_text {
-     line-height: 1.2;
-     padding-inline: 15px;
-     margin-bottom: 20px;
-     color: var(--base-white);
-     width: 70%;
-     margin-inline: auto;
-     text-shadow: 0 0 5px black;
-   }
-
-   /* --- step-section --- */
-   .step__title-wrapper {
-     margin-bottom: 0;
-   }
-
-   .step__item-wrapper,
-   .step__item-wrapper:nth-child(2),
-   .step__item-wrapper:nth-child(3) {
-     flex-direction: column;
-     width: 100%;
-   }
-
-   .step__item_content {
-     margin-inline: auto;
-     max-width: 80%;
-     margin-bottom: 30px;
-   }
-
-   .step__img-wrapper {
-     width: 280px;
-     height: 425px;
-     margin-inline: auto;
-     background-position: center;
-     background-size: cover;
-   }
-
-   .step__img-shadow,
-   .step__img_screen {
-     width: 132px;
-     height: 120px;
-     bottom: 112px;
-   }
-
- }
-
- /* ---425PX --- */
- @media (max-width:425px) {
-   .header-container {
-     column-gap: 0;
-   }
-
-   .step__title-wrapper {
-     width: 100%;
-   }
-
-   .step__item_title {
-     width: 100%;
-   }
- }
-
- /* --- 375PX --- */
- @media (max-width:375px) {
-   .header-container {
-     min-height: 60px;
-   }
-
-   .header__nav_list {
-     display: none;
-   }
-
-   .well-section {
-     height: 450px;
-   }
- }
