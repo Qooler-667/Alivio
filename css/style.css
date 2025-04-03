@@ -44,8 +44,8 @@
  /* ---well-section --- */
  .well-section {
    width: 100%;
-   height: 895px;
    display: flex;
+   padding: 150px 0;
    align-items: center;
    margin-bottom: 50px;
    background-size: cover;
@@ -146,7 +146,6 @@
    margin-bottom: 60px;
  }
 
-
  .step__img_group {
    position: absolute;
    right: 0;
@@ -173,11 +172,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap: 30px;
-
-   /* ----- поставить на 1440---- */
-   flex-wrap: wrap;
-   /* --------- */
+   gap: 20px;
  }
 
  .story__content {
@@ -195,8 +190,8 @@
  }
 
  .story__player-wrapper {
-   min-width: 895px;
-   height: 515px;
+
+
    border-radius: 20px;
    position: relative;
    overflow: hidden;
@@ -215,8 +210,9 @@
 
  .story__player {
    display: block;
-   width: 895px;
-   height: 515px;
+   max-width: 895px;
+   height: auto;
+
    object-fit: cover;
  }
 
@@ -261,12 +257,7 @@
    margin-bottom: 12px;
  }
 
- h6:first-child {
-   margin-bottom: 6px;
-   color: rgba(0, 0, 0, .65);
- }
-
- h6 {
+ .diaru__block_title {
    margin-bottom: 10px;
  }
 
@@ -353,8 +344,111 @@
 
 
 
-
-
-
-
  /* --- MEDIA --- */
+
+ /* --- 1440PX --- */
+ @media (max-width:1440px) {
+
+   /* step-section */
+   .step__items-wrapper {
+     grid-template-columns: 1fr;
+     height: fit-content;
+     gap: 30px;
+   }
+
+   .step__item-wrapper {
+     flex-direction: row;
+     height: 425px;
+   }
+
+   .step__item-wrapper,
+   .step__item-wrapper:nth-child(2),
+   .step__item-wrapper:nth-child(3) {
+     justify-content: center;
+   }
+
+   .step__item-wrapper:nth-child(2) {
+     flex-direction: row-reverse;
+   }
+
+   .step__item_content {
+     max-width: 50%;
+     padding: 0 50px;
+   }
+
+   .step__img_group {
+     width: 160px;
+     height: 120px;
+     bottom: 110px;
+   }
+
+   /* --- STORY-SECTION --- */
+   .story-section {
+     padding: 100px 0;
+   }
+
+   .story-container {
+     flex-direction: column;
+     text-align: center;
+   }
+
+   .story__content {
+     margin-bottom: 30px;
+   }
+
+   .story__content_title>br,
+   .diary__content_title>br {
+     display: none;
+   }
+
+   .story__content>.btn,
+   .diary__content>.btn {
+     margin-inline: auto;
+   }
+
+   /* --- DIARY-SECTION --- */
+   .diary-section {
+     padding: 50px 0;
+   }
+
+   .diary-container {
+     flex-direction: column-reverse;
+     padding: 0 20px;
+     text-align: center;
+   }
+
+   .diary__img-wrapper {
+     margin-inline: auto;
+
+     display: flex;
+     padding: 0 50px;
+     align-items: center;
+     gap: 50px;
+   }
+ }
+
+ /* --- 1024PX --- */
+ @media (max-width:1024px) {
+
+   .header-container {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .header__nav_list {
+     display: none;
+   }
+
+   .well-section {
+     padding: 100px 0;
+   }
+
+   .story__player-wrapper {
+     max-width: 100%;
+     aspect-ratio: 16/9;
+   }
+
+   .story__player {
+     width: 100%;
+   }
+ }
