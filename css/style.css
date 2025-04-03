@@ -89,16 +89,15 @@
  }
 
  .step__items-wrapper {
-   width: 100%;
-   height: 1140px;
-   display: flex;
-   gap: 95px;
+   display: grid;
+   grid-template-columns: repeat(3, 4fr);
+   column-gap: 95px;
+   height: 1085px;
    margin-bottom: 50px;
  }
 
  .step__item-wrapper {
    display: flex;
-   width: calc(100%/3);
    flex-direction: column;
  }
 
@@ -110,10 +109,8 @@
    justify-content: center;
  }
 
+ .step__img-group,
  .step__item_title {
-   width: 100%;
-   height: 225px;
-   display: flex;
    position: relative;
  }
 
@@ -121,8 +118,12 @@
  .step__title-write,
  .step__title-alivio {
    position: absolute;
-   bottom: 75px;
-   left: 90px;
+   white-space: nowrap;
+   bottom: 45px;
+ }
+
+ .step__title-personalize {
+   left: 87px;
  }
 
  .step__title-write {
@@ -130,53 +131,33 @@
  }
 
  .step__title-alivio {
-   left: 125px;
-   bottom: 70px;
+   left: 120px;
  }
 
- .step__item_title>span {
-   font-size: 150px;
+ .step__title_number {
    font-family: var(--second-font);
+   font-weight: 400;
+   font-size: 150px;
+   line-height: 1.5;
    color: var(--numbers-color);
  }
 
  .step__item_text {
-   padding-right: 20px;
-   margin-bottom: 50px;
+   margin-bottom: 60px;
  }
 
- .step__img-wrapper {
-   width: 100%;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   border-radius: 12px;
-   position: relative;
- }
 
- .step__img_bg {
-   height: 550px;
-   background-size: cover;
-   background-position: 90% 10%;
-   background-repeat: no-repeat;
-   background-image: url(../images/bg01-img.jpg);
- }
-
- .step__img_screen,
- .step__img-shadow {
-   width: 205px;
-   height: 144px;
+ .step__img_group {
    position: absolute;
-   bottom: 155px;
-   right: 0px;
+   right: 0;
+   bottom: 130px;
+   width: 195px;
+   height: 150px;
+   background-image: url(../images/screen-img.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   box-shadow: inset 25px -5px 100px rgba(0, 0, 0, .4);
  }
-
- .step__img-shadow {
-   display: flex;
-   background: linear-gradient(135deg, rgb(24, 24, 24, .3) 0%, rgba(196, 196, 196, 0) 100%);
-   z-index: 1;
- }
-
 
  /* --- STORY-SECTION --- */
  .story-section {
@@ -193,6 +174,10 @@
    align-items: center;
    justify-content: space-between;
    gap: 30px;
+
+   /* ----- поставить на 1440---- */
+   flex-wrap: wrap;
+   /* --------- */
  }
 
  .story__content {
@@ -234,7 +219,6 @@
    height: 515px;
    object-fit: cover;
  }
-
 
  .play-btn {
    cursor: pointer;
