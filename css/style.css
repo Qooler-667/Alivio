@@ -310,7 +310,7 @@
    margin-bottom: 30px;
  }
 
- .diary__content>p {
+ .diary__content_text {
    margin-bottom: 50px;
  }
 
@@ -443,6 +443,10 @@
      padding: 100px 0;
    }
 
+   .step__title-write {
+     left: 60px;
+   }
+
    .story__player-wrapper {
      max-width: 100%;
      aspect-ratio: 16/9;
@@ -450,5 +454,118 @@
 
    .story__player {
      width: 100%;
+   }
+ }
+
+ @media (max-width:768px) {
+   .header-container {
+     gap: 0;
+   }
+
+   .header-btn:first-child {
+     display: none;
+   }
+
+   .step-section {
+     text-align: center;
+   }
+
+   .step-section__text {
+     margin-bottom: 20px;
+   }
+
+   .step__title-wrapper {
+     flex-direction: column;
+     padding-bottom: 0;
+     width: 80%;
+     margin-inline: auto;
+     gap: 20px;
+   }
+
+   .step__title {
+     line-height: 1.2;
+   }
+
+   .step__items-wrapper {
+     grid-template-rows: 1fr;
+     flex-direction: row;
+     gap: 0;
+   }
+
+   .step__item-wrapper {
+     flex-direction: column;
+     height: fit-content;
+   }
+
+   .step__item_content {
+     max-width: 80%;
+     text-align: center;
+     padding: 0;
+     margin-inline: auto;
+   }
+
+   .step__title-personalize,
+   .step__title-write,
+   .step__title-alivio {
+     left: 50%;
+     transform: translate(-50%);
+   }
+
+   .step__img-wrapper {
+     margin-inline: 30px;
+   }
+
+   .step__img_group {
+     width: 48%;
+     height: 29%;
+     bottom: calc(220px + (365 - 220) * ((100vw - 768px) / (768 - 320)));
+   }
+
+   .step__item-wrapper:nth-child(2) {
+     flex-direction: column;
+   }
+
+   /* --- DIARY-SECTION --- */
+   .diary-container {
+     gap: 50px;
+   }
+
+   .diary__content_title,
+   .story__content_title {
+     width: 80%;
+     margin-inline: auto;
+   }
+
+   .diary__content_text {
+     margin-bottom: 30px;
+   }
+
+   .diary__img {
+     display: none;
+   }
+
+   .diary__img-wrapper {
+     min-width: 100%;
+     padding: 0;
+     justify-content: center;
+     height: auto;
+   }
+
+   .diary__img-block {
+     position: static;
+     margin-inline: auto;
+   }
+
+   .story__content {
+     min-width: 100%;
+   }
+
+   .story__content_title>br {
+     display: none;
+   }
+
+   /* --- FOOTER --- */
+   .footer__list {
+     margin-left: 50px;
    }
  }
